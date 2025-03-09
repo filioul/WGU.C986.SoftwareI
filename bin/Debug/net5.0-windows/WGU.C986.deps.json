@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "WGU.C986/1.0.0": {
+        "runtime": {
+          "WGU.C986.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WGU.C986/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

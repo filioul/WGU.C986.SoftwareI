@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\weedia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\weedia\\.nuget\\packages"
+    ]
+  }
+}
