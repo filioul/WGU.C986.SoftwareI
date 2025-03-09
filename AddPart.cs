@@ -12,6 +12,8 @@ namespace WGU.C986
 {
     public partial class AddPart : Form
     {
+        //initiating instance of class FormButtons to be able to use the methods there
+        FormButtons FormButtons = new FormButtons();
         public AddPart()
         {
             InitializeComponent();
@@ -31,6 +33,12 @@ namespace WGU.C986
             radioButtonOutsourced.Checked = false;
             // changes label if the radio button is checked
             labelMachineID.Text = "Machine ID";
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormButtons.ReturnToMainForm();
         }
     }
 }

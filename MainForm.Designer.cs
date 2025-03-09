@@ -134,7 +134,9 @@ namespace WGU.C986
             this.addButtonProducts.Size = new System.Drawing.Size(62, 31);
             this.addButtonProducts.TabIndex = 14;
             this.addButtonProducts.Text = "Add";
-            this.addButtonProducts.UseVisualStyleBackColor = true;            // 
+            this.addButtonProducts.UseVisualStyleBackColor = true;
+            this.addButtonProducts.Click += new System.EventHandler(this.addButtonProducts_Click);
+            // 
             // modifyButtonProducts
             // 
             this.modifyButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -144,6 +146,7 @@ namespace WGU.C986
             this.modifyButtonProducts.TabIndex = 13;
             this.modifyButtonProducts.Text = "Modify";
             this.modifyButtonProducts.UseVisualStyleBackColor = true;
+            this.modifyButtonProducts.Click += new System.EventHandler(this.modifyButtonProducts_Click);
             // 
             // deleteButtonProducts
             // 
@@ -201,6 +204,7 @@ namespace WGU.C986
             this.exitButton.TabIndex = 15;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // MainForm
             // 

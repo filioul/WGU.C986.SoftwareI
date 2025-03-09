@@ -12,6 +12,8 @@ namespace WGU.C986
 {
     public partial class ModifyPart : Form
     {
+        //initiating instance of class FormButtons to be able to use the methods there
+        FormButtons FormButtons = new FormButtons();
         public ModifyPart()
         {
             InitializeComponent();
@@ -31,6 +33,12 @@ namespace WGU.C986
             radioButtonInHouse.Checked = false;
             // changes label if the radio button is checked
             labelMachineID.Text = "Company Name";
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormButtons.ReturnToMainForm();
         }
     }
 }

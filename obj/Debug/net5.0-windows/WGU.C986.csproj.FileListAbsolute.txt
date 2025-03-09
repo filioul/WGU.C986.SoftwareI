@@ -18,3 +18,5 @@ C:\Users\weedia\source\repos\WGU.C986\WGU.C986\obj\Debug\net5.0-windows\ref\WGU.
 C:\Users\weedia\source\repos\WGU.C986\WGU.C986\obj\Debug\net5.0-windows\WGU.C986.pdb
 C:\Users\weedia\source\repos\WGU.C986\WGU.C986\obj\Debug\net5.0-windows\WGU.C986.genruntimeconfig.cache
 C:\Users\weedia\source\repos\WGU.C986\WGU.C986\obj\Debug\net5.0-windows\WGU.C986.ModifyPart.resources
+C:\Users\weedia\source\repos\WGU.C986\WGU.C986\obj\Debug\net5.0-windows\WGU.C986.AddProduct.resources
+C:\Users\weedia\source\repos\WGU.C986\WGU.C986\obj\Debug\net5.0-windows\WGU.C986.ModifyProduct.resources
