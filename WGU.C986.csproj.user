@@ -7,13 +7,13 @@
     <Compile Update="AddProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ModifyProduct.cs">
+    <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ModifyPart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MainForm.cs">
+    <Compile Update="ModifyProduct.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

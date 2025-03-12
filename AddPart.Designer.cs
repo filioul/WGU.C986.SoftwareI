@@ -39,15 +39,17 @@ namespace WGU.C986
             this.labelInventory = new System.Windows.Forms.Label();
             this.textBoxInventory = new System.Windows.Forms.TextBox();
             this.labelPriceCost = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxPriceCost = new System.Windows.Forms.TextBox();
             this.labelMax = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxMax = new System.Windows.Forms.TextBox();
             this.labelMin = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxMin = new System.Windows.Forms.TextBox();
             this.labelMachineID = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxMachineID = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.groupBoxRadioButtons = new System.Windows.Forms.GroupBox();
+            this.groupBoxRadioButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAddPartHeader
@@ -62,14 +64,14 @@ namespace WGU.C986
             // 
             // radioButtonInHouse
             // 
-            this.radioButtonInHouse.AutoCheck = false;
             this.radioButtonInHouse.AutoSize = true;
             this.radioButtonInHouse.Checked = true;
             this.radioButtonInHouse.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonInHouse.Location = new System.Drawing.Point(129, 13);
+            this.radioButtonInHouse.Location = new System.Drawing.Point(6, 6);
             this.radioButtonInHouse.Name = "radioButtonInHouse";
             this.radioButtonInHouse.Size = new System.Drawing.Size(74, 19);
             this.radioButtonInHouse.TabIndex = 1;
+            this.radioButtonInHouse.TabStop = true;
             this.radioButtonInHouse.Text = "In-House";
             this.radioButtonInHouse.UseVisualStyleBackColor = true;
             this.radioButtonInHouse.CheckedChanged += new System.EventHandler(this.radioButtonInHouse_CheckedChanged);
@@ -78,7 +80,7 @@ namespace WGU.C986
             // 
             this.radioButtonOutsourced.AutoSize = true;
             this.radioButtonOutsourced.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonOutsourced.Location = new System.Drawing.Point(245, 13);
+            this.radioButtonOutsourced.Location = new System.Drawing.Point(109, 6);
             this.radioButtonOutsourced.Name = "radioButtonOutsourced";
             this.radioButtonOutsourced.Size = new System.Drawing.Size(87, 19);
             this.radioButtonOutsourced.TabIndex = 2;
@@ -88,6 +90,7 @@ namespace WGU.C986
             // 
             // textBoxID
             // 
+            this.textBoxID.BackColor = System.Drawing.Color.White;
             this.textBoxID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxID.Location = new System.Drawing.Point(167, 70);
             this.textBoxID.Name = "textBoxID";
@@ -116,11 +119,13 @@ namespace WGU.C986
             // 
             // textBoxName
             // 
+            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxName.Location = new System.Drawing.Point(168, 117);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(138, 25);
             this.textBoxName.TabIndex = 5;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelInventory
             // 
@@ -134,11 +139,13 @@ namespace WGU.C986
             // 
             // textBoxInventory
             // 
+            this.textBoxInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxInventory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxInventory.Location = new System.Drawing.Point(167, 164);
             this.textBoxInventory.Name = "textBoxInventory";
             this.textBoxInventory.Size = new System.Drawing.Size(138, 25);
             this.textBoxInventory.TabIndex = 7;
+            this.textBoxInventory.TextChanged += new System.EventHandler(this.textBoxInventory_TextChanged);
             // 
             // labelPriceCost
             // 
@@ -150,13 +157,15 @@ namespace WGU.C986
             this.labelPriceCost.TabIndex = 10;
             this.labelPriceCost.Text = "Price / Cost";
             // 
-            // textBox3
+            // textBoxPriceCost
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(167, 209);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(138, 25);
-            this.textBox3.TabIndex = 9;
+            this.textBoxPriceCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxPriceCost.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPriceCost.Location = new System.Drawing.Point(167, 209);
+            this.textBoxPriceCost.Name = "textBoxPriceCost";
+            this.textBoxPriceCost.Size = new System.Drawing.Size(138, 25);
+            this.textBoxPriceCost.TabIndex = 9;
+            this.textBoxPriceCost.TextChanged += new System.EventHandler(this.textBoxPriceCost_TextChanged);
             // 
             // labelMax
             // 
@@ -168,13 +177,15 @@ namespace WGU.C986
             this.labelMax.TabIndex = 12;
             this.labelMax.Text = "Max";
             // 
-            // textBox4
+            // textBoxMax
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(167, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(69, 25);
-            this.textBox4.TabIndex = 11;
+            this.textBoxMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxMax.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxMax.Location = new System.Drawing.Point(167, 255);
+            this.textBoxMax.Name = "textBoxMax";
+            this.textBoxMax.Size = new System.Drawing.Size(69, 25);
+            this.textBoxMax.TabIndex = 11;
+            this.textBoxMax.TextChanged += new System.EventHandler(this.textBoxMax_TextChanged);
             // 
             // labelMin
             // 
@@ -186,13 +197,15 @@ namespace WGU.C986
             this.labelMin.TabIndex = 14;
             this.labelMin.Text = "Min";
             // 
-            // textBox5
+            // textBoxMin
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(312, 255);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(69, 25);
-            this.textBox5.TabIndex = 13;
+            this.textBoxMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxMin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxMin.Location = new System.Drawing.Point(312, 255);
+            this.textBoxMin.Name = "textBoxMin";
+            this.textBoxMin.Size = new System.Drawing.Size(69, 25);
+            this.textBoxMin.TabIndex = 13;
+            this.textBoxMin.TextChanged += new System.EventHandler(this.textBoxMin_TextChanged);
             // 
             // labelMachineID
             // 
@@ -204,16 +217,19 @@ namespace WGU.C986
             this.labelMachineID.TabIndex = 16;
             this.labelMachineID.Text = "Machine ID";
             // 
-            // textBox6
+            // textBoxMachineID
             // 
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(168, 299);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(138, 25);
-            this.textBox6.TabIndex = 15;
+            this.textBoxMachineID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxMachineID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxMachineID.Location = new System.Drawing.Point(168, 299);
+            this.textBoxMachineID.Name = "textBoxMachineID";
+            this.textBoxMachineID.Size = new System.Drawing.Size(138, 25);
+            this.textBoxMachineID.TabIndex = 15;
+            this.textBoxMachineID.TextChanged += new System.EventHandler(this.textBoxMachineID_TextChanged);
             // 
             // buttonSave
             // 
+            this.buttonSave.Enabled = false;
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonSave.Location = new System.Drawing.Point(257, 352);
             this.buttonSave.Name = "buttonSave";
@@ -233,33 +249,44 @@ namespace WGU.C986
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // groupBoxRadioButtons
+            // 
+            this.groupBoxRadioButtons.Controls.Add(this.radioButtonInHouse);
+            this.groupBoxRadioButtons.Controls.Add(this.radioButtonOutsourced);
+            this.groupBoxRadioButtons.Location = new System.Drawing.Point(119, 9);
+            this.groupBoxRadioButtons.Name = "groupBoxRadioButtons";
+            this.groupBoxRadioButtons.Size = new System.Drawing.Size(285, 55);
+            this.groupBoxRadioButtons.TabIndex = 19;
+            this.groupBoxRadioButtons.TabStop = false;
+            // 
             // AddPart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(470, 450);
+            this.Controls.Add(this.groupBoxRadioButtons);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelMachineID);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxMachineID);
             this.Controls.Add(this.labelMin);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxMin);
             this.Controls.Add(this.labelMax);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxMax);
             this.Controls.Add(this.labelPriceCost);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxPriceCost);
             this.Controls.Add(this.labelInventory);
             this.Controls.Add(this.textBoxInventory);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelID);
             this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.radioButtonOutsourced);
-            this.Controls.Add(this.radioButtonInHouse);
             this.Controls.Add(this.lblAddPartHeader);
             this.Name = "AddPart";
             this.Text = "Part";
+            this.groupBoxRadioButtons.ResumeLayout(false);
+            this.groupBoxRadioButtons.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,14 +304,15 @@ namespace WGU.C986
         private System.Windows.Forms.Label labelInventory;
         private System.Windows.Forms.TextBox textBoxInventory;
         private System.Windows.Forms.Label labelPriceCost;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxPriceCost;
         private System.Windows.Forms.Label labelMax;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxMax;
         private System.Windows.Forms.Label labelMin;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxMin;
         private System.Windows.Forms.Label labelMachineID;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxMachineID;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.GroupBox groupBoxRadioButtons;
     }
 }

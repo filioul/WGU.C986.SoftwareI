@@ -51,7 +51,7 @@ namespace WGU.C986
             this.labelAssociatedParts = new System.Windows.Forms.Label();
             this.listBoxAssociated = new System.Windows.Forms.ListBox();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelMin
@@ -66,11 +66,13 @@ namespace WGU.C986
             // 
             // textBoxMin
             // 
+            this.textBoxMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxMin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxMin.Location = new System.Drawing.Point(255, 405);
             this.textBoxMin.Name = "textBoxMin";
             this.textBoxMin.Size = new System.Drawing.Size(69, 25);
             this.textBoxMin.TabIndex = 25;
+            this.textBoxMin.TextChanged += new System.EventHandler(this.textBoxMin_TextChanged);
             // 
             // labelMax
             // 
@@ -84,11 +86,13 @@ namespace WGU.C986
             // 
             // textBoxMax
             // 
+            this.textBoxMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxMax.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxMax.Location = new System.Drawing.Point(106, 405);
             this.textBoxMax.Name = "textBoxMax";
             this.textBoxMax.Size = new System.Drawing.Size(69, 25);
             this.textBoxMax.TabIndex = 23;
+            this.textBoxMax.TextChanged += new System.EventHandler(this.textBoxMax_TextChanged);
             // 
             // labelPrice
             // 
@@ -102,11 +106,13 @@ namespace WGU.C986
             // 
             // textBoxPrice
             // 
+            this.textBoxPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxPrice.Location = new System.Drawing.Point(143, 359);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(138, 25);
             this.textBoxPrice.TabIndex = 21;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
             // labelInventory
             // 
@@ -120,11 +126,13 @@ namespace WGU.C986
             // 
             // textBoxInventory
             // 
+            this.textBoxInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxInventory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxInventory.Location = new System.Drawing.Point(143, 314);
             this.textBoxInventory.Name = "textBoxInventory";
             this.textBoxInventory.Size = new System.Drawing.Size(138, 25);
             this.textBoxInventory.TabIndex = 19;
+            this.textBoxInventory.TextChanged += new System.EventHandler(this.textBoxInventory_TextChanged);
             // 
             // labelName
             // 
@@ -138,11 +146,13 @@ namespace WGU.C986
             // 
             // textBoxName
             // 
+            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBoxName.Location = new System.Drawing.Point(144, 267);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(138, 25);
             this.textBoxName.TabIndex = 17;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // labelID
             // 
@@ -259,15 +269,16 @@ namespace WGU.C986
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // saveButton
+            // buttonSave
             // 
-            this.saveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.saveButton.Location = new System.Drawing.Point(722, 568);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(62, 31);
-            this.saveButton.TabIndex = 38;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
+            this.buttonSave.Enabled = false;
+            this.buttonSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSave.Location = new System.Drawing.Point(722, 568);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(62, 31);
+            this.buttonSave.TabIndex = 38;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
             // 
             // AddProduct
             // 
@@ -275,7 +286,7 @@ namespace WGU.C986
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1014, 637);
-            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.labelAssociatedParts);
@@ -329,6 +340,6 @@ namespace WGU.C986
         private System.Windows.Forms.Label labelAssociatedParts;
         private System.Windows.Forms.ListBox listBoxAssociated;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button buttonSave;
     }
 }

@@ -12,8 +12,9 @@ namespace WGU.C986
 {
     public partial class ModifyPart : Form
     {
-        //initiating instance of class FormButtons to be able to use the methods there
+        //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
         FormButtons FormButtons = new FormButtons();
+        FormValidation FormValidation = new FormValidation();
         public ModifyPart()
         {
             InitializeComponent();
@@ -21,16 +22,12 @@ namespace WGU.C986
 
         private void radioButtonInHouse_CheckedChanged(object sender, EventArgs e)
         {
-            // unchecks the other radio button
-            radioButtonOutsourced.Checked = false;
             // changes label if the radio button is checked
             labelMachineID.Text = "Machine ID";
         }
 
         private void radioButtonOutsourced_CheckedChanged(object sender, EventArgs e)
         {
-            // unchecks the other radio button
-            radioButtonInHouse.Checked = false;
             // changes label if the radio button is checked
             labelMachineID.Text = "Company Name";
         }
@@ -39,6 +36,42 @@ namespace WGU.C986
         {
             Hide();
             FormButtons.ReturnToMainForm();
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            FormValidation.ChangeFieldColorWhenFilled(textBoxName);
+            FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
+        }
+
+        private void textBoxInventory_TextChanged(object sender, EventArgs e)
+        {
+            FormValidation.ChangeFieldColorWhenFilled(textBoxInventory);
+            FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
+        }
+
+        private void textBoxPriceCost_TextChanged(object sender, EventArgs e)
+        {
+            FormValidation.ChangeFieldColorWhenFilled(textBoxPriceCost);
+            FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
+        }
+
+        private void textBoxMax_TextChanged(object sender, EventArgs e)
+        {
+            FormValidation.ChangeFieldColorWhenFilled(textBoxMax);
+            FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
+        }
+
+        private void textBoxMin_TextChanged(object sender, EventArgs e)
+        {
+            FormValidation.ChangeFieldColorWhenFilled(textBoxMin);
+            FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
+        }
+
+        private void textBoxMachineID_TextChanged(object sender, EventArgs e)
+        {
+            FormValidation.ChangeFieldColorWhenFilled(textBoxMachineID);
+            FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
     }
 }
