@@ -12,12 +12,13 @@ namespace WGU.C986
 {
     public partial class AddPart : Form
     {
-        //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
-        FormButtons FormButtons = new FormButtons();
-        FormValidation FormValidation = new FormValidation();
+        
         public AddPart()
         {
             InitializeComponent();
+            //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
+            FormButtons FormButtons = new FormButtons();
+            FormValidation FormValidation = new FormValidation();
         }
 
         private void radioButtonOutsourced_CheckedChanged(object sender, EventArgs e)

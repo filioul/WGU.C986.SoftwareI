@@ -32,7 +32,6 @@ namespace WGU.C986
             this.lblPageHeader = new System.Windows.Forms.Label();
             this.searchBoxParts = new System.Windows.Forms.TextBox();
             this.searchButtonParts = new System.Windows.Forms.Button();
-            this.listBoxParts = new System.Windows.Forms.ListBox();
             this.labelParts = new System.Windows.Forms.Label();
             this.deleteButtonParts = new System.Windows.Forms.Button();
             this.modifyButtonParts = new System.Windows.Forms.Button();
@@ -41,10 +40,13 @@ namespace WGU.C986
             this.modifyButtonProducts = new System.Windows.Forms.Button();
             this.deleteButtonProducts = new System.Windows.Forms.Button();
             this.labelProducts = new System.Windows.Forms.Label();
-            this.listBoxProducts = new System.Windows.Forms.ListBox();
             this.searchButtonProducts = new System.Windows.Forms.Button();
             this.searchBoxProducts = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
+            this.partGridView = new System.Windows.Forms.DataGridView();
+            this.productGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPageHeader
@@ -64,6 +66,7 @@ namespace WGU.C986
             this.searchBoxParts.Name = "searchBoxParts";
             this.searchBoxParts.Size = new System.Drawing.Size(242, 25);
             this.searchBoxParts.TabIndex = 1;
+            this.searchBoxParts.TextChanged += new System.EventHandler(this.searchBoxParts_TextChanged);
             // 
             // searchButtonParts
             // 
@@ -74,15 +77,6 @@ namespace WGU.C986
             this.searchButtonParts.TabIndex = 2;
             this.searchButtonParts.Text = "Search";
             this.searchButtonParts.UseVisualStyleBackColor = true;
-            // 
-            // listBoxParts
-            // 
-            this.listBoxParts.FormattingEnabled = true;
-            this.listBoxParts.ItemHeight = 15;
-            this.listBoxParts.Location = new System.Drawing.Point(31, 125);
-            this.listBoxParts.Name = "listBoxParts";
-            this.listBoxParts.Size = new System.Drawing.Size(525, 214);
-            this.listBoxParts.TabIndex = 3;
             // 
             // labelParts
             // 
@@ -168,15 +162,6 @@ namespace WGU.C986
             this.labelProducts.TabIndex = 11;
             this.labelProducts.Text = "Products";
             // 
-            // listBoxProducts
-            // 
-            this.listBoxProducts.FormattingEnabled = true;
-            this.listBoxProducts.ItemHeight = 15;
-            this.listBoxProducts.Location = new System.Drawing.Point(588, 125);
-            this.listBoxProducts.Name = "listBoxProducts";
-            this.listBoxProducts.Size = new System.Drawing.Size(525, 214);
-            this.listBoxProducts.TabIndex = 10;
-            // 
             // searchButtonProducts
             // 
             this.searchButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -206,30 +191,50 @@ namespace WGU.C986
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // partGridView
+            // 
+            this.partGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.partGridView.Location = new System.Drawing.Point(31, 125);
+            this.partGridView.Name = "partGridView";
+            this.partGridView.RowTemplate.Height = 25;
+            this.partGridView.Size = new System.Drawing.Size(505, 214);
+            this.partGridView.TabIndex = 16;
+            // 
+            // productGridView
+            // 
+            this.productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productGridView.Location = new System.Drawing.Point(588, 125);
+            this.productGridView.Name = "productGridView";
+            this.productGridView.RowTemplate.Height = 25;
+            this.productGridView.Size = new System.Drawing.Size(505, 214);
+            this.productGridView.TabIndex = 17;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1150, 465);
+            this.Controls.Add(this.productGridView);
+            this.Controls.Add(this.partGridView);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.addButtonProducts);
             this.Controls.Add(this.modifyButtonProducts);
             this.Controls.Add(this.deleteButtonProducts);
             this.Controls.Add(this.labelProducts);
-            this.Controls.Add(this.listBoxProducts);
             this.Controls.Add(this.searchButtonProducts);
             this.Controls.Add(this.searchBoxProducts);
             this.Controls.Add(this.addButtonParts);
             this.Controls.Add(this.modifyButtonParts);
             this.Controls.Add(this.deleteButtonParts);
             this.Controls.Add(this.labelParts);
-            this.Controls.Add(this.listBoxParts);
             this.Controls.Add(this.searchButtonParts);
             this.Controls.Add(this.searchBoxParts);
             this.Controls.Add(this.lblPageHeader);
             this.Name = "MainForm";
             this.Text = "Main Screen";
+            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +245,6 @@ namespace WGU.C986
         private System.Windows.Forms.Label lblPageHeader;
         private System.Windows.Forms.TextBox searchBoxParts;
         private System.Windows.Forms.Button searchButtonParts;
-        private System.Windows.Forms.ListBox listBoxParts;
         private System.Windows.Forms.Label labelParts;
         private System.Windows.Forms.Button deleteButtonParts;
         private System.Windows.Forms.Button modifyButtonParts;
@@ -249,10 +253,11 @@ namespace WGU.C986
         private System.Windows.Forms.Button modifyButtonProducts;
         private System.Windows.Forms.Button deleteButtonProducts;
         private System.Windows.Forms.Label labelProducts;
-        private System.Windows.Forms.ListBox listBoxProducts;
         private System.Windows.Forms.Button searchButtonProducts;
         private System.Windows.Forms.TextBox searchBoxProducts;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.DataGridView partGridView;
+        private System.Windows.Forms.DataGridView productGridView;
     }
 }
 

@@ -17,6 +17,16 @@ namespace WGU.C986
         public int Min;
         public int Max;
 
+        public Product(int prodID, string name, int inStock, decimal price, int max, int min)
+        {
+            ProductID = prodID;
+            Name = name;
+            InStock = inStock;
+            Price = price;
+            Max = max;
+            Min = min;
+        }
+
         //method to add an associated part
         public void AddAssociatedPart(Part part)
         {

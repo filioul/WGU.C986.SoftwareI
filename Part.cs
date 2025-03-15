@@ -16,14 +16,29 @@ namespace WGU.C986
         public int InStock;
         public int Min;
         public int Max;
+
+        public Part()
+        {
+
+        }
+
+        public Part(int partID, string name, decimal price, int inStock, int min, int max)
+        {
+            PartID = partID;
+            Name = name;
+            InStock = inStock;
+            Price = price;
+            Max = max;
+            Min = min;
+        }
     }
 
-    abstract class Inhouse : Part
+    class Inhouse : Part
     {
         private int MachineID;
     }
 
-    abstract class Outsourced : Part
+    class Outsourced : Part
     {
         private int CompanyName;
     }

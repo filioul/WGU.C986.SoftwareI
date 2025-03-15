@@ -13,12 +13,13 @@ namespace WGU.C986
   
     public partial class ModifyProduct : Form
     {
-        //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
-        FormButtons FormButtons = new FormButtons();
-        FormValidation FormValidation = new FormValidation();
+        
         public ModifyProduct()
         {
             InitializeComponent();
+            //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
+            FormButtons FormButtons = new FormButtons();
+            FormValidation FormValidation = new FormValidation();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

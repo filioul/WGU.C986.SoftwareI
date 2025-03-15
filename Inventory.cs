@@ -14,13 +14,13 @@ namespace WGU.C986
         public static BindingList<Part> Parts = new BindingList<Part>();
 
         //method to add a product to inventory
-        public static void AddProduct(Product prod)
+        public void AddProduct(Product prod)
         {
             Products.Add(prod);
         }
 
         //method to remove a product from inventory
-        public static bool RemoveProduct(int prodID)
+        public bool RemoveProduct(int prodID)
         {
             bool productRemoval = false;
             foreach (Product prod in Products)
@@ -40,7 +40,7 @@ namespace WGU.C986
         }
 
         //method to look up a product
-        public static Product LookupProduct(int prodID)
+        public Product LookupProduct(int prodID)
         {
             foreach (Product prod in Products)
             {
@@ -54,7 +54,7 @@ namespace WGU.C986
         }
 
         //method to update the details of an existing product
-        public static void UpdateProduct(int prodID, Product newProductVersion)
+        public void UpdateProduct(int prodID, Product newProductVersion)
         {
             foreach (Product existingProduct in Products)
             {
@@ -68,13 +68,13 @@ namespace WGU.C986
         }
 
         //method to add a part to inventory
-        public static void AddPart(Part part)
+        public void AddPart(Part part)
         {
             Parts.Add(part);
         }
 
         //method to delete a part from inventory
-        public static bool DeletePart(int part)
+        public bool DeletePart(int part)
         {
             Part partToDelete = LookupPart(part);
             if (partToDelete == null)
@@ -103,7 +103,7 @@ namespace WGU.C986
         }
 
         //method to update an existing part
-        public static void UpdatePart(int partID, Part part)
+        public void UpdatePart(int partID, Part part)
         {
             foreach (Part existingPart in Parts)
             {
