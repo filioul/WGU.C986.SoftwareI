@@ -43,10 +43,10 @@ namespace WGU.C986
             this.searchButtonProducts = new System.Windows.Forms.Button();
             this.searchBoxProducts = new System.Windows.Forms.TextBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.partGridView = new System.Windows.Forms.DataGridView();
             this.productGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).BeginInit();
+            this.partGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPageHeader
@@ -191,15 +191,6 @@ namespace WGU.C986
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // partGridView
-            // 
-            this.partGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.partGridView.Location = new System.Drawing.Point(31, 125);
-            this.partGridView.Name = "partGridView";
-            this.partGridView.RowTemplate.Height = 25;
-            this.partGridView.Size = new System.Drawing.Size(505, 214);
-            this.partGridView.TabIndex = 16;
-            // 
             // productGridView
             // 
             this.productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -208,6 +199,17 @@ namespace WGU.C986
             this.productGridView.RowTemplate.Height = 25;
             this.productGridView.Size = new System.Drawing.Size(505, 214);
             this.productGridView.TabIndex = 17;
+            this.productGridView.AutoGenerateColumns = true;
+            // 
+            // partGridView
+            // 
+            this.partGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.partGridView.Location = new System.Drawing.Point(31, 125);
+            this.partGridView.Name = "partGridView";
+            this.partGridView.RowTemplate.Height = 25;
+            this.partGridView.Size = new System.Drawing.Size(505, 214);
+            this.partGridView.TabIndex = 16;
+            this.partGridView.AutoGenerateColumns = true;
             // 
             // MainForm
             // 
@@ -233,8 +235,8 @@ namespace WGU.C986
             this.Controls.Add(this.lblPageHeader);
             this.Name = "MainForm";
             this.Text = "Main Screen";
-            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +258,8 @@ namespace WGU.C986
         private System.Windows.Forms.Button searchButtonProducts;
         private System.Windows.Forms.TextBox searchBoxProducts;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.DataGridView partGridView;
         private System.Windows.Forms.DataGridView productGridView;
+        private System.Windows.Forms.DataGridView partGridView;
     }
 }
 

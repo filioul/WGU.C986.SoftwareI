@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace WGU.C986
 {
-    abstract class Part
+    public abstract class Part
     {
         public int PartID;
         public string Name;
@@ -22,7 +22,13 @@ namespace WGU.C986
 
         }
 
-        public Part(int partID, string name, decimal price, int inStock, int min, int max)
+        
+    }
+
+    public class Inhouse : Part
+    {
+        //private int MachineID;
+        public Inhouse(int partID, string name, decimal price, int inStock, int min, int max)
         {
             PartID = partID;
             Name = name;
@@ -33,13 +39,17 @@ namespace WGU.C986
         }
     }
 
-    class Inhouse : Part
+   public class Outsourced : Part
     {
-        private int MachineID;
-    }
-
-    class Outsourced : Part
-    {
-        private int CompanyName;
+        //private int CompanyName;
+        public Outsourced(int partID, string name, decimal price, int inStock, int min, int max)
+        {
+            PartID = partID;
+            Name = name;
+            InStock = inStock;
+            Price = price;
+            Max = max;
+            Min = min;
+        }
     }
 }

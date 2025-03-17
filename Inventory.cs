@@ -10,8 +10,8 @@ namespace WGU.C986
 {
     class Inventory
     {
-        public static BindingList<Product> Products = new BindingList<Product>();
-        public static BindingList<Part> Parts = new BindingList<Part>();
+        public BindingList<Product> Products = new BindingList<Product>();
+        public BindingList<Part> AllParts = new BindingList<Part>();
 
         //method to add a product to inventory
         public void AddProduct(Product prod)
@@ -70,7 +70,7 @@ namespace WGU.C986
         //method to add a part to inventory
         public void AddPart(Part part)
         {
-            Parts.Add(part);
+            AllParts.Add(part);
         }
 
         //method to delete a part from inventory
@@ -83,15 +83,15 @@ namespace WGU.C986
             }
             else
             {
-                Parts.Remove(partToDelete);
+                AllParts.Remove(partToDelete);
                 return true;
             }
         }
 
         //method to look up a part
-        public static Part LookupPart(int partID)
+        public Part LookupPart(int partID)
         {
-            foreach (Part part in Parts)
+            foreach (Part part in AllParts)
             {
                 if (part.PartID == partID)
                 {
@@ -105,7 +105,7 @@ namespace WGU.C986
         //method to update an existing part
         public void UpdatePart(int partID, Part part)
         {
-            foreach (Part existingPart in Parts)
+            foreach (Part existingPart in AllParts)
             {
                 if (existingPart.PartID == partID)
                 {

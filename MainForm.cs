@@ -15,25 +15,32 @@ namespace WGU.C986
         
         public MainForm()
         {
+            
             InitializeComponent();
-            InitializeInventoryAndTables();
+            InitializeInventory();
+
+
+
             //initiating instance of classes to be able to use the methods there
             FormButtons FormButtons = new FormButtons();
             InventoryManagementTools InventorManagementTools = new InventoryManagementTools();
         }
 
-        public void InitializeInventoryAndTables()
+        public void InitializeInventory()
         {
-            //creates inventory and populates tables
+            //creates inventory
             Inventory workingInventory =  InventoryManagementTools.CreateTestInventory();
 
-            var partTable = new BindingSource();
-            partTable.DataSource = Inventory.Parts;
-            partGridView.DataSource = partTable;
+            //populates tables
+            var sourceParts = new BindingSource();
+            sourceParts.DataSource = workingInventory.AllParts;
+            partGridView.DataSource = sourceParts;
 
-            var prodTable = new BindingSource();
-            prodTable.DataSource = Inventory.Products;
-            productGridView.DataSource = prodTable;
+
+            var sourceProducts = new BindingSource();
+            sourceProducts.DataSource = workingInventory.Products;
+            productGridView.DataSource = sourceProducts;
+
         }
         private void addButtonParts_Click(object sender, EventArgs e)
         {
