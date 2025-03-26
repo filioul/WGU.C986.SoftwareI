@@ -1,0 +1,188 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\addpart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:addpart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\addpart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:addpart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\inventorymanagementtools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:inventorymanagementtools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\part.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:part.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\formbuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:formbuttons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\formvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:formvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InventoryManagementTools.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\InventoryManagementTools.cs",
+              "RelativeDocumentMoniker": "InventoryManagementTools.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\InventoryManagementTools.cs",
+              "RelativeToolTip": "InventoryManagementTools.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T03:12:18.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddPart.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\AddPart.cs",
+              "RelativeDocumentMoniker": "AddPart.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\AddPart.cs [Design]",
+              "RelativeToolTip": "AddPart.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:59:53.662Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormButtons.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\FormButtons.cs",
+              "RelativeDocumentMoniker": "FormButtons.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\FormButtons.cs",
+              "RelativeToolTip": "FormButtons.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:52:06.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\Product.cs",
+              "RelativeDocumentMoniker": "Product.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\Product.cs",
+              "RelativeToolTip": "Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:49:46.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\Inventory.cs",
+              "RelativeDocumentMoniker": "Inventory.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\Inventory.cs",
+              "RelativeToolTip": "Inventory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:24:59.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddPart.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\AddPart.cs",
+              "RelativeDocumentMoniker": "AddPart.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\AddPart.cs",
+              "RelativeToolTip": "AddPart.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAWwGAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:36:15.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Part.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\Part.cs",
+              "RelativeDocumentMoniker": "Part.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\Part.cs",
+              "RelativeToolTip": "Part.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T03:39:31.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T03:19:19.267Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswEAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T03:19:21.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormValidation.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\FormValidation.cs",
+              "RelativeDocumentMoniker": "FormValidation.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\FormValidation.cs",
+              "RelativeToolTip": "FormValidation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:52:13.186Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

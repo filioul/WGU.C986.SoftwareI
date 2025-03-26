@@ -27,8 +27,8 @@ namespace WGU.C986
 
     public class Inhouse : Part
     {
-        //private int MachineID;
-        public Inhouse(int partID, string name, decimal price, int inStock, int min, int max)
+        private int MachineID;
+        public Inhouse(int partID, string name, decimal price, int inStock, int min, int max, int machineid)
         {
             PartID = partID;
             Name = name;
@@ -36,13 +36,14 @@ namespace WGU.C986
             Price = price;
             Max = max;
             Min = min;
+            MachineID = machineid;
         }
     }
 
    public class Outsourced : Part
     {
-        //private int CompanyName;
-        public Outsourced(int partID, string name, decimal price, int inStock, int min, int max)
+        private string CompanyName;
+        public Outsourced(int partID, string name, decimal price, int inStock, int min, int max, string company)
         {
             PartID = partID;
             Name = name;
@@ -50,6 +51,7 @@ namespace WGU.C986
             Price = price;
             Max = max;
             Min = min;
+            CompanyName = company;
         }
     }
 }

@@ -29,216 +29,215 @@ namespace WGU.C986
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPageHeader = new System.Windows.Forms.Label();
-            this.searchBoxParts = new System.Windows.Forms.TextBox();
-            this.searchButtonParts = new System.Windows.Forms.Button();
-            this.labelParts = new System.Windows.Forms.Label();
-            this.deleteButtonParts = new System.Windows.Forms.Button();
-            this.modifyButtonParts = new System.Windows.Forms.Button();
-            this.addButtonParts = new System.Windows.Forms.Button();
-            this.addButtonProducts = new System.Windows.Forms.Button();
-            this.modifyButtonProducts = new System.Windows.Forms.Button();
-            this.deleteButtonProducts = new System.Windows.Forms.Button();
-            this.labelProducts = new System.Windows.Forms.Label();
-            this.searchButtonProducts = new System.Windows.Forms.Button();
-            this.searchBoxProducts = new System.Windows.Forms.TextBox();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.productGridView = new System.Windows.Forms.DataGridView();
-            this.partGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).BeginInit();
-            this.SuspendLayout();
+            lblPageHeader = new System.Windows.Forms.Label();
+            searchBoxParts = new System.Windows.Forms.TextBox();
+            searchButtonParts = new System.Windows.Forms.Button();
+            labelParts = new System.Windows.Forms.Label();
+            deleteButtonParts = new System.Windows.Forms.Button();
+            modifyButtonParts = new System.Windows.Forms.Button();
+            addButtonParts = new System.Windows.Forms.Button();
+            addButtonProducts = new System.Windows.Forms.Button();
+            modifyButtonProducts = new System.Windows.Forms.Button();
+            deleteButtonProducts = new System.Windows.Forms.Button();
+            labelProducts = new System.Windows.Forms.Label();
+            searchButtonProducts = new System.Windows.Forms.Button();
+            searchBoxProducts = new System.Windows.Forms.TextBox();
+            exitButton = new System.Windows.Forms.Button();
+            productGridView = new System.Windows.Forms.DataGridView();
+            partGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)productGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)partGridView).BeginInit();
+            SuspendLayout();
             // 
             // lblPageHeader
             // 
-            this.lblPageHeader.AutoSize = true;
-            this.lblPageHeader.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPageHeader.Location = new System.Drawing.Point(12, 9);
-            this.lblPageHeader.Name = "lblPageHeader";
-            this.lblPageHeader.Size = new System.Drawing.Size(283, 28);
-            this.lblPageHeader.TabIndex = 0;
-            this.lblPageHeader.Text = "Inventory Management System";
+            lblPageHeader.AutoSize = true;
+            lblPageHeader.Font = new System.Drawing.Font("Segoe UI", 15F);
+            lblPageHeader.Location = new System.Drawing.Point(12, 9);
+            lblPageHeader.Name = "lblPageHeader";
+            lblPageHeader.Size = new System.Drawing.Size(283, 28);
+            lblPageHeader.TabIndex = 0;
+            lblPageHeader.Text = "Inventory Management System";
             // 
             // searchBoxParts
             // 
-            this.searchBoxParts.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchBoxParts.Location = new System.Drawing.Point(314, 72);
-            this.searchBoxParts.Name = "searchBoxParts";
-            this.searchBoxParts.Size = new System.Drawing.Size(242, 25);
-            this.searchBoxParts.TabIndex = 1;
-            this.searchBoxParts.TextChanged += new System.EventHandler(this.searchBoxParts_TextChanged);
+            searchBoxParts.Font = new System.Drawing.Font("Segoe UI", 10F);
+            searchBoxParts.Location = new System.Drawing.Point(314, 72);
+            searchBoxParts.Name = "searchBoxParts";
+            searchBoxParts.Size = new System.Drawing.Size(242, 25);
+            searchBoxParts.TabIndex = 1;
             // 
             // searchButtonParts
             // 
-            this.searchButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchButtonParts.Location = new System.Drawing.Point(250, 73);
-            this.searchButtonParts.Name = "searchButtonParts";
-            this.searchButtonParts.Size = new System.Drawing.Size(58, 23);
-            this.searchButtonParts.TabIndex = 2;
-            this.searchButtonParts.Text = "Search";
-            this.searchButtonParts.UseVisualStyleBackColor = true;
+            searchButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            searchButtonParts.Location = new System.Drawing.Point(250, 73);
+            searchButtonParts.Name = "searchButtonParts";
+            searchButtonParts.Size = new System.Drawing.Size(58, 23);
+            searchButtonParts.TabIndex = 2;
+            searchButtonParts.Text = "Search";
+            searchButtonParts.UseVisualStyleBackColor = true;
+            searchButtonParts.Click += searchButtonParts_Click;
             // 
             // labelParts
             // 
-            this.labelParts.AutoSize = true;
-            this.labelParts.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelParts.Location = new System.Drawing.Point(31, 94);
-            this.labelParts.Name = "labelParts";
-            this.labelParts.Size = new System.Drawing.Size(54, 28);
-            this.labelParts.TabIndex = 4;
-            this.labelParts.Text = "Parts";
+            labelParts.AutoSize = true;
+            labelParts.Font = new System.Drawing.Font("Segoe UI", 15F);
+            labelParts.Location = new System.Drawing.Point(31, 94);
+            labelParts.Name = "labelParts";
+            labelParts.Size = new System.Drawing.Size(54, 28);
+            labelParts.TabIndex = 4;
+            labelParts.Text = "Parts";
             // 
             // deleteButtonParts
             // 
-            this.deleteButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteButtonParts.Location = new System.Drawing.Point(494, 356);
-            this.deleteButtonParts.Name = "deleteButtonParts";
-            this.deleteButtonParts.Size = new System.Drawing.Size(62, 31);
-            this.deleteButtonParts.TabIndex = 5;
-            this.deleteButtonParts.Text = "Delete";
-            this.deleteButtonParts.UseVisualStyleBackColor = true;
+            deleteButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            deleteButtonParts.Location = new System.Drawing.Point(494, 356);
+            deleteButtonParts.Name = "deleteButtonParts";
+            deleteButtonParts.Size = new System.Drawing.Size(62, 31);
+            deleteButtonParts.TabIndex = 5;
+            deleteButtonParts.Text = "Delete";
+            deleteButtonParts.UseVisualStyleBackColor = true;
+            deleteButtonParts.Click += deleteButtonParts_Click;
             // 
             // modifyButtonParts
             // 
-            this.modifyButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.modifyButtonParts.Location = new System.Drawing.Point(426, 356);
-            this.modifyButtonParts.Name = "modifyButtonParts";
-            this.modifyButtonParts.Size = new System.Drawing.Size(62, 31);
-            this.modifyButtonParts.TabIndex = 6;
-            this.modifyButtonParts.Text = "Modify";
-            this.modifyButtonParts.UseVisualStyleBackColor = true;
-            this.modifyButtonParts.Click += new System.EventHandler(this.modifyButtonParts_Click);
+            modifyButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            modifyButtonParts.Location = new System.Drawing.Point(426, 356);
+            modifyButtonParts.Name = "modifyButtonParts";
+            modifyButtonParts.Size = new System.Drawing.Size(62, 31);
+            modifyButtonParts.TabIndex = 6;
+            modifyButtonParts.Text = "Modify";
+            modifyButtonParts.UseVisualStyleBackColor = true;
+            modifyButtonParts.Click += modifyButtonParts_Click;
             // 
             // addButtonParts
             // 
-            this.addButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addButtonParts.Location = new System.Drawing.Point(358, 356);
-            this.addButtonParts.Name = "addButtonParts";
-            this.addButtonParts.Size = new System.Drawing.Size(62, 31);
-            this.addButtonParts.TabIndex = 7;
-            this.addButtonParts.Text = "Add";
-            this.addButtonParts.UseVisualStyleBackColor = true;
-            this.addButtonParts.Click += new System.EventHandler(this.addButtonParts_Click);
+            addButtonParts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            addButtonParts.Location = new System.Drawing.Point(358, 356);
+            addButtonParts.Name = "addButtonParts";
+            addButtonParts.Size = new System.Drawing.Size(62, 31);
+            addButtonParts.TabIndex = 7;
+            addButtonParts.Text = "Add";
+            addButtonParts.UseVisualStyleBackColor = true;
+            addButtonParts.Click += addButtonParts_Click;
             // 
             // addButtonProducts
             // 
-            this.addButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addButtonProducts.Location = new System.Drawing.Point(915, 356);
-            this.addButtonProducts.Name = "addButtonProducts";
-            this.addButtonProducts.Size = new System.Drawing.Size(62, 31);
-            this.addButtonProducts.TabIndex = 14;
-            this.addButtonProducts.Text = "Add";
-            this.addButtonProducts.UseVisualStyleBackColor = true;
-            this.addButtonProducts.Click += new System.EventHandler(this.addButtonProducts_Click);
+            addButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            addButtonProducts.Location = new System.Drawing.Point(915, 356);
+            addButtonProducts.Name = "addButtonProducts";
+            addButtonProducts.Size = new System.Drawing.Size(62, 31);
+            addButtonProducts.TabIndex = 14;
+            addButtonProducts.Text = "Add";
+            addButtonProducts.UseVisualStyleBackColor = true;
+            addButtonProducts.Click += addButtonProducts_Click;
             // 
             // modifyButtonProducts
             // 
-            this.modifyButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.modifyButtonProducts.Location = new System.Drawing.Point(983, 356);
-            this.modifyButtonProducts.Name = "modifyButtonProducts";
-            this.modifyButtonProducts.Size = new System.Drawing.Size(62, 31);
-            this.modifyButtonProducts.TabIndex = 13;
-            this.modifyButtonProducts.Text = "Modify";
-            this.modifyButtonProducts.UseVisualStyleBackColor = true;
-            this.modifyButtonProducts.Click += new System.EventHandler(this.modifyButtonProducts_Click);
+            modifyButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            modifyButtonProducts.Location = new System.Drawing.Point(983, 356);
+            modifyButtonProducts.Name = "modifyButtonProducts";
+            modifyButtonProducts.Size = new System.Drawing.Size(62, 31);
+            modifyButtonProducts.TabIndex = 13;
+            modifyButtonProducts.Text = "Modify";
+            modifyButtonProducts.UseVisualStyleBackColor = true;
+            modifyButtonProducts.Click += modifyButtonProducts_Click;
             // 
             // deleteButtonProducts
             // 
-            this.deleteButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.deleteButtonProducts.Location = new System.Drawing.Point(1051, 356);
-            this.deleteButtonProducts.Name = "deleteButtonProducts";
-            this.deleteButtonProducts.Size = new System.Drawing.Size(62, 31);
-            this.deleteButtonProducts.TabIndex = 12;
-            this.deleteButtonProducts.Text = "Delete";
-            this.deleteButtonProducts.UseVisualStyleBackColor = true;
+            deleteButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            deleteButtonProducts.Location = new System.Drawing.Point(1051, 356);
+            deleteButtonProducts.Name = "deleteButtonProducts";
+            deleteButtonProducts.Size = new System.Drawing.Size(62, 31);
+            deleteButtonProducts.TabIndex = 12;
+            deleteButtonProducts.Text = "Delete";
+            deleteButtonProducts.UseVisualStyleBackColor = true;
+            deleteButtonProducts.Click += deleteButtonProducts_Click;
             // 
             // labelProducts
             // 
-            this.labelProducts.AutoSize = true;
-            this.labelProducts.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelProducts.Location = new System.Drawing.Point(588, 94);
-            this.labelProducts.Name = "labelProducts";
-            this.labelProducts.Size = new System.Drawing.Size(89, 28);
-            this.labelProducts.TabIndex = 11;
-            this.labelProducts.Text = "Products";
+            labelProducts.AutoSize = true;
+            labelProducts.Font = new System.Drawing.Font("Segoe UI", 15F);
+            labelProducts.Location = new System.Drawing.Point(588, 94);
+            labelProducts.Name = "labelProducts";
+            labelProducts.Size = new System.Drawing.Size(89, 28);
+            labelProducts.TabIndex = 11;
+            labelProducts.Text = "Products";
             // 
             // searchButtonProducts
             // 
-            this.searchButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchButtonProducts.Location = new System.Drawing.Point(807, 73);
-            this.searchButtonProducts.Name = "searchButtonProducts";
-            this.searchButtonProducts.Size = new System.Drawing.Size(58, 23);
-            this.searchButtonProducts.TabIndex = 9;
-            this.searchButtonProducts.Text = "Search";
-            this.searchButtonProducts.UseVisualStyleBackColor = true;
+            searchButtonProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            searchButtonProducts.Location = new System.Drawing.Point(807, 73);
+            searchButtonProducts.Name = "searchButtonProducts";
+            searchButtonProducts.Size = new System.Drawing.Size(58, 23);
+            searchButtonProducts.TabIndex = 9;
+            searchButtonProducts.Text = "Search";
+            searchButtonProducts.UseVisualStyleBackColor = true;
+            searchButtonProducts.Click += searchButtonProducts_Click;
             // 
             // searchBoxProducts
             // 
-            this.searchBoxProducts.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.searchBoxProducts.Location = new System.Drawing.Point(871, 72);
-            this.searchBoxProducts.Name = "searchBoxProducts";
-            this.searchBoxProducts.Size = new System.Drawing.Size(242, 25);
-            this.searchBoxProducts.TabIndex = 8;
+            searchBoxProducts.Font = new System.Drawing.Font("Segoe UI", 10F);
+            searchBoxProducts.Location = new System.Drawing.Point(871, 72);
+            searchBoxProducts.Name = "searchBoxProducts";
+            searchBoxProducts.Size = new System.Drawing.Size(242, 25);
+            searchBoxProducts.TabIndex = 8;
             // 
             // exitButton
             // 
-            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.exitButton.Location = new System.Drawing.Point(1051, 410);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(62, 31);
-            this.exitButton.TabIndex = 15;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            exitButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            exitButton.Location = new System.Drawing.Point(1051, 410);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new System.Drawing.Size(62, 31);
+            exitButton.TabIndex = 15;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
             // 
             // productGridView
             // 
-            this.productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productGridView.Location = new System.Drawing.Point(588, 125);
-            this.productGridView.Name = "productGridView";
-            this.productGridView.RowTemplate.Height = 25;
-            this.productGridView.Size = new System.Drawing.Size(505, 214);
-            this.productGridView.TabIndex = 17;
-            this.productGridView.AutoGenerateColumns = true;
+            productGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            productGridView.Location = new System.Drawing.Point(588, 125);
+            productGridView.Name = "productGridView";
+            productGridView.Size = new System.Drawing.Size(505, 214);
+            productGridView.TabIndex = 17;
             // 
             // partGridView
             // 
-            this.partGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.partGridView.Location = new System.Drawing.Point(31, 125);
-            this.partGridView.Name = "partGridView";
-            this.partGridView.RowTemplate.Height = 25;
-            this.partGridView.Size = new System.Drawing.Size(505, 214);
-            this.partGridView.TabIndex = 16;
-            this.partGridView.AutoGenerateColumns = true;
+            partGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            partGridView.Location = new System.Drawing.Point(31, 125);
+            partGridView.Name = "partGridView";
+            partGridView.Size = new System.Drawing.Size(505, 214);
+            partGridView.TabIndex = 16;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1150, 465);
-            this.Controls.Add(this.productGridView);
-            this.Controls.Add(this.partGridView);
-            this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.addButtonProducts);
-            this.Controls.Add(this.modifyButtonProducts);
-            this.Controls.Add(this.deleteButtonProducts);
-            this.Controls.Add(this.labelProducts);
-            this.Controls.Add(this.searchButtonProducts);
-            this.Controls.Add(this.searchBoxProducts);
-            this.Controls.Add(this.addButtonParts);
-            this.Controls.Add(this.modifyButtonParts);
-            this.Controls.Add(this.deleteButtonParts);
-            this.Controls.Add(this.labelParts);
-            this.Controls.Add(this.searchButtonParts);
-            this.Controls.Add(this.searchBoxParts);
-            this.Controls.Add(this.lblPageHeader);
-            this.Name = "MainForm";
-            this.Text = "Main Screen";
-            ((System.ComponentModel.ISupportInitialize)(this.productGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.partGridView)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.ControlLight;
+            ClientSize = new System.Drawing.Size(1150, 465);
+            Controls.Add(productGridView);
+            Controls.Add(partGridView);
+            Controls.Add(exitButton);
+            Controls.Add(addButtonProducts);
+            Controls.Add(modifyButtonProducts);
+            Controls.Add(deleteButtonProducts);
+            Controls.Add(labelProducts);
+            Controls.Add(searchButtonProducts);
+            Controls.Add(searchBoxProducts);
+            Controls.Add(addButtonParts);
+            Controls.Add(modifyButtonParts);
+            Controls.Add(deleteButtonParts);
+            Controls.Add(labelParts);
+            Controls.Add(searchButtonParts);
+            Controls.Add(searchBoxParts);
+            Controls.Add(lblPageHeader);
+            Name = "MainForm";
+            Text = "Main Screen";
+            ((System.ComponentModel.ISupportInitialize)productGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)partGridView).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

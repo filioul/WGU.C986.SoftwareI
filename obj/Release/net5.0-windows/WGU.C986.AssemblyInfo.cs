@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WGU.C986")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4eb4137b8580334b8e46bd1e09ef2e5ae8e25aaa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5013cdfae0ffc8d8faa9cc8287ba387ee786a203")]
 [assembly: System.Reflection.AssemblyProductAttribute("WGU.C986")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WGU.C986")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

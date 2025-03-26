@@ -12,19 +12,19 @@ namespace WGU.C986
 {
     public partial class MainForm : Form
     {
-        private Inventory workingInventory;
+        Inventory workingInventory = new Inventory();
         public MainForm()
         {
-            
+
             InitializeComponent();
-            InitializeInventory();
+            workingInventory = InitializeInventory();
 
             //initiating instance of classes to be able to use the methods there
             FormButtons FormButtons = new FormButtons();
             InventoryManagementTools InventorManagementTools = new InventoryManagementTools();
         }
 
-        public void InitializeInventory()
+        private Inventory InitializeInventory()
         {
             workingInventory = InventoryManagementTools.CreateTestInventory();
 
@@ -37,16 +37,34 @@ namespace WGU.C986
             sourceProducts.DataSource = workingInventory.Products;
             productGridView.DataSource = sourceProducts;
 
-            // Debug logging
-            System.Diagnostics.Debug.Write($"Parts count: {workingInventory.AllParts.Count}");
-            System.Diagnostics.Debug.Write($"Products count: {workingInventory.Products.Count}");
+            return workingInventory;
 
         }
+
+        public void RefreshDataGridViews(Inventory newInventory)
+        {
+        
+            workingInventory = newInventory;
+
+            var sourcePartsNew = new BindingSource();
+            sourcePartsNew.DataSource = workingInventory.AllParts;
+            partGridView.DataSource = sourcePartsNew;
+
+            var sourceProductsNew = new BindingSource();
+            sourceProductsNew.DataSource = workingInventory.Products;
+            productGridView.DataSource = sourceProductsNew;
+
+            partGridView.Refresh();
+            productGridView.Refresh();
+
+        }
+
         private void addButtonParts_Click(object sender, EventArgs e)
         {
             // opens AddPart form when the 'Add' button is clicked
-            Hide();
-            var addPartForm = new AddPart();
+            
+            var addPartForm = new AddPart(workingInventory);
+            addPartForm.Owner = this;
             addPartForm.Show();
         }
 
@@ -77,9 +95,81 @@ namespace WGU.C986
             FormButtons.ExitApplication();
         }
 
-        private void searchBoxParts_TextChanged(object sender, EventArgs e)
-        {
 
+        private void deleteButtonParts_Click(object sender, EventArgs e)
+        {
+            if (partGridView.CurrentRow.Selected == false)
+            {
+                MessageBox.Show("Please select a row before deleting.");
+            }
+            else
+            {
+                Part selectedPart = partGridView.CurrentRow.DataBoundItem as Part;
+                workingInventory.AllParts.Remove(selectedPart);
+                partGridView.ClearSelection();
+            }
+        }
+
+        private void deleteButtonProducts_Click(object sender, EventArgs e)
+        {
+            if (productGridView.CurrentRow.Selected == false)
+            {
+                MessageBox.Show("Please select a row before deleting.");
+            }
+            else
+            {
+                Product selectedProduct = productGridView.CurrentRow.DataBoundItem as Product;
+                workingInventory.Products.Remove(selectedProduct);
+                productGridView.ClearSelection();
+            }
+        }
+
+        private void searchButtonParts_Click(object sender, EventArgs e)
+        {
+            if (searchBoxParts.Text == "" || !int.TryParse(searchBoxParts.Text, out int id))
+            {
+                MessageBox.Show("Please enter a valid search term.");
+            }
+            else
+            {
+                foreach (DataGridViewRow row in partGridView.Rows)
+                {
+                    if (row.DataBoundItem is Part part)
+                    {
+                        if (part.PartID == id)
+                        {
+                            partGridView.ClearSelection();
+                            row.Selected = true;
+                            return;
+                        }
+                    }
+                }
+                MessageBox.Show("Part not found.");
+            }
+        }
+
+        private void searchButtonProducts_Click(object sender, EventArgs e)
+        {
+            if (searchBoxProducts.Text == "" || !int.TryParse(searchBoxProducts.Text, out int id))
+            {
+                MessageBox.Show("Please enter a valid search term.");
+            }
+            else
+            {
+                foreach (DataGridViewRow row in productGridView.Rows)
+                {
+                    if (row.DataBoundItem is Product product)
+                    {
+                        if (product.ProductID == id)
+                        {
+                            productGridView.ClearSelection();
+                            row.Selected = true;
+                            return;
+                        }
+                    }
+                }
+                MessageBox.Show("Product not found.");
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace WGU.C986
 {
-    class Product
+    public class Product
     {
         public BindingList<Part> AssociatedParts { get; } = new BindingList<Part>();
         public int ProductID { get; set; }

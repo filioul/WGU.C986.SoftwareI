@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,23 +24,23 @@ namespace WGU.C986
             workingInventory.AddProduct(testProd4);
 
             //adding test inhouse parts
-            Inhouse testPart1 = new Inhouse(1, "Inhouse 1", 9m, 5, 0, 9);
+            Inhouse testPart1 = new Inhouse(1, "Inhouse 1", 9m, 5, 0, 9, 1003);
             workingInventory.AddPart(testPart1);
-            Inhouse testPart2 = new Inhouse(2, "Inhouse 2", 7m, 2, 1, 6);
+            Inhouse testPart2 = new Inhouse(2, "Inhouse 2", 7m, 2, 1, 6, 1004);
             workingInventory.AddPart(testPart2);
-            Inhouse testPart3 = new Inhouse(3, "Inhouse 3", 9m, 4, 2, 5);
-            workingInventory.AddPart(testPart1);
-            Inhouse testPart4 = new Inhouse(4, "Inhouse 4", 3m, 4, 2, 9);
+            Inhouse testPart3 = new Inhouse(3, "Inhouse 3", 9m, 4, 2, 5, 1009);
+            workingInventory.AddPart(testPart3);
+            Inhouse testPart4 = new Inhouse(4, "Inhouse 4", 3m, 4, 2, 9, 1005);
             workingInventory.AddPart(testPart4);
 
             //adding test outsourced parts
-            Outsourced testPart5 = new Outsourced(1, "Outsourced 1", 7m, 2, 1, 3);
+            Outsourced testPart5 = new Outsourced(11, "Outsourced 1", 7m, 2, 1, 3, "Company A");
             workingInventory.AddPart(testPart5);
-            Outsourced testPart6 = new Outsourced(2, "Outsourced 2", 4m, 2, 2, 7);
+            Outsourced testPart6 = new Outsourced(22, "Outsourced 2", 4m, 2, 2, 7, "Company B");
             workingInventory.AddPart(testPart6);
-            Outsourced testPart7 = new Outsourced(3, "Outsourced 3", 5m, 4, 1, 8);
+            Outsourced testPart7 = new Outsourced(33, "Outsourced 3", 5m, 4, 1, 8, "Company A");
             workingInventory.AddPart(testPart7);
-            Outsourced testPart8 = new Outsourced(4, "Outsourced 4", 2m, 4, 2, 8);
+            Outsourced testPart8 = new Outsourced(44, "Outsourced 4", 2m, 4, 2, 8, "Company C");
             workingInventory.AddPart(testPart8);
 
             //adding test associated parts

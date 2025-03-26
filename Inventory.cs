@@ -8,10 +8,10 @@ using System.ComponentModel;
 
 namespace WGU.C986
 {
-    class Inventory
+    public class Inventory
     {
-        public BindingList<Product> Products = new BindingList<Product>();
-        public BindingList<Part> AllParts = new BindingList<Part>();
+        public BindingList<Product> Products { get; } = new BindingList<Product>();
+        public BindingList<Part> AllParts { get; } = new BindingList<Part>();
 
         //method to add a product to inventory
         public void AddProduct(Product prod)

@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WGU.C986
 {
     public partial class AddPart : Form
     {
-        
-        public AddPart()
+        private Inventory workingInventory;
+        public AddPart(Inventory inventory)
         {
             InitializeComponent();
+            workingInventory = inventory;
+
             //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
             FormButtons FormButtons = new FormButtons();
             FormValidation FormValidation = new FormValidation();
@@ -73,6 +76,53 @@ namespace WGU.C986
         {
             FormValidation.ChangeFieldColorWhenFilled(textBoxMachineID);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (radioButtonInHouse.Checked)
+            {
+                try
+                {
+                    Inhouse newInhouse = new Inhouse(int.Parse(textBoxID.Text),
+                                                     textBoxName.Text,
+                                                     decimal.Parse(textBoxPriceCost.Text),
+                                                     int.Parse(textBoxInventory.Text),
+                                                     int.Parse(textBoxMin.Text),
+                                                     int.Parse(textBoxMax.Text),
+                                                     int.Parse(textBoxMachineID.Text));
+                    workingInventory.AddPart(newInhouse);
+                    MessageBox.Show("New inhouse part added.");
+                    ((MainForm)this.Owner).RefreshDataGridViews(workingInventory);
+                    this.Close();
+                } catch
+                {
+                    MessageBox.Show("Invalid part details, please try again.");
+                }
+
+
+            } else if (radioButtonOutsourced.Checked)
+            {
+                try
+                {
+                    Outsourced newOutsourced = new Outsourced(int.Parse(textBoxID.Text),
+                                                     textBoxName.Text,
+                                                     decimal.Parse(textBoxPriceCost.Text),
+                                                     int.Parse(textBoxInventory.Text),
+                                                     int.Parse(textBoxMin.Text),
+                                                     int.Parse(textBoxMax.Text),
+                                                     textBoxMachineID.Text);
+                    workingInventory.AddPart(newOutsourced);
+                    MessageBox.Show("New outsourced part added.");
+                    ((MainForm)this.Owner).RefreshDataGridViews(workingInventory);
+                    this.Close();
+                 
+                } catch
+                {
+                    MessageBox.Show("Invalid part details, please try again.");
+                }
+            }
+            
         }
     }
 }
