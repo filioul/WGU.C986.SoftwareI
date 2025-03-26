@@ -9,13 +9,13 @@ namespace WGU.C986
 {
     class Product
     {
-        public BindingList<Part> AssociatedParts = new BindingList<Part>();
-        public int ProductID;
-        public string Name;
-        public decimal Price;
-        public int InStock;
-        public int Min;
-        public int Max;
+        public BindingList<Part> AssociatedParts { get; } = new BindingList<Part>();
+        public int ProductID { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public int InStock { get; set; }
+        public int Min { get; set; }
+        public int Max { get; set; }
 
         public Product(int prodID, string name, int inStock, decimal price, int max, int min)
         {

@@ -12,14 +12,12 @@ namespace WGU.C986
 {
     public partial class MainForm : Form
     {
-        
+        private Inventory workingInventory;
         public MainForm()
         {
             
             InitializeComponent();
             InitializeInventory();
-
-
 
             //initiating instance of classes to be able to use the methods there
             FormButtons FormButtons = new FormButtons();
@@ -28,18 +26,20 @@ namespace WGU.C986
 
         public void InitializeInventory()
         {
-            //creates inventory
-            Inventory workingInventory =  InventoryManagementTools.CreateTestInventory();
+            workingInventory = InventoryManagementTools.CreateTestInventory();
 
-            //populates tables
+
             var sourceParts = new BindingSource();
             sourceParts.DataSource = workingInventory.AllParts;
             partGridView.DataSource = sourceParts;
 
-
             var sourceProducts = new BindingSource();
             sourceProducts.DataSource = workingInventory.Products;
             productGridView.DataSource = sourceProducts;
+
+            // Debug logging
+            System.Diagnostics.Debug.Write($"Parts count: {workingInventory.AllParts.Count}");
+            System.Diagnostics.Debug.Write($"Products count: {workingInventory.Products.Count}");
 
         }
         private void addButtonParts_Click(object sender, EventArgs e)
