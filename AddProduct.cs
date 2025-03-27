@@ -17,7 +17,7 @@ namespace WGU.C986
         public AddProduct(Inventory inventory)
         {
             workingInventory = inventory;
-            
+
             InitializeComponent();
 
             var sourceParts = new BindingSource();
@@ -30,8 +30,7 @@ namespace WGU.C986
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            Hide();
-            FormButtons.ReturnToMainForm();
+            this.Close();
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
@@ -96,6 +95,43 @@ namespace WGU.C986
                 var sourceAssociated = new BindingSource();
                 sourceAssociated.DataSource = newProduct.AssociatedParts;
                 associatedGridView.DataSource = sourceAssociated;
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (associatedGridView.CurrentRow.Selected == true)
+            {
+                Part selectedPart = allGridView.CurrentRow.DataBoundItem as Part;
+                newProduct.RemoveAssociatedPart(selectedPart.PartID);
+
+                var sourceAssociated = new BindingSource();
+                sourceAssociated.DataSource = newProduct.AssociatedParts;
+                associatedGridView.DataSource = sourceAssociated;
+            }
+        }
+
+        private void searchButtonProducts_Click(object sender, EventArgs e)
+        {
+            if (searchBoxProducts.Text == "" || !int.TryParse(searchBoxProducts.Text, out int id))
+            {
+                MessageBox.Show("Please enter a valid search term.");
+            }
+            else
+            {
+                foreach (DataGridViewRow row in allGridView.Rows)
+                {
+                    if (row.DataBoundItem is Part part)
+                    {
+                        if (part.PartID == id)
+                        {
+                            allGridView.ClearSelection();
+                            row.Selected = true;
+                            return;
+                        }
+                    }
+                }
+                MessageBox.Show("Part not found.");
             }
         }
     }

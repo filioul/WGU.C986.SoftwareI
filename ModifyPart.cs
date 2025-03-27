@@ -39,8 +39,7 @@ namespace WGU.C986
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            Hide();
-            FormButtons.ReturnToMainForm();
+            this.Close();
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)

@@ -14,12 +14,6 @@ namespace WGU.C986
             Application.Exit();
         }
 
-        public static void ReturnToMainForm() //returns to the main form page, to be used when a cancel button is pressed by the user 
-        {
-            var mainForm = new MainForm();
-            mainForm.Show();
-        }
-
 
     }
 }

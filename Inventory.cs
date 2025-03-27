@@ -22,21 +22,16 @@ namespace WGU.C986
         //method to remove a product from inventory
         public bool RemoveProduct(int prodID)
         {
-            bool productRemoval = false;
-            foreach (Product prod in Products)
+            Product productToDelete = LookupProduct(prodID);
+            if (productToDelete == null)
             {
-                if (prodID == prod.ProductID)
-                {
-                    Products.Remove(prod);
-                    return productRemoval = true;
-                }
-                else
-                {
-                    MessageBox.Show("ERROR: The removal failed.");
-                    return productRemoval = false;
-                }
+                return false;
             }
-            return productRemoval;
+            else
+            {
+                Products.Remove(productToDelete);
+                return true;
+            }
         }
 
         //method to look up a product

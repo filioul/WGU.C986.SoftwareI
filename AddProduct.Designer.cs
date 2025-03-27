@@ -214,6 +214,7 @@ namespace WGU.C986
             searchButtonProducts.TabIndex = 29;
             searchButtonProducts.Text = "Search";
             searchButtonProducts.UseVisualStyleBackColor = true;
+            searchButtonProducts.Click += searchButtonProducts_Click;
             // 
             // searchBoxProducts
             // 
@@ -232,6 +233,7 @@ namespace WGU.C986
             deleteButton.TabIndex = 36;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // labelAssociatedParts
             // 

@@ -94,9 +94,17 @@ namespace WGU.C986
         private void modifyButtonProducts_Click(object sender, EventArgs e)
         {
             // opens ModifyProduct form when the 'Modify' button is clicked
-            Hide();
-            var modifyProductForm = new ModifyProduct();
-            modifyProductForm.Show();
+            if (productGridView.CurrentRow.Selected == false)
+            {
+                MessageBox.Show("Please select a row before modifying.");
+            }
+            else
+            {
+                Product selectedProduct = productGridView.CurrentRow.DataBoundItem as Product;
+                var modifyProductForm = new ModifyProduct(workingInventory, selectedProduct);
+                modifyProductForm.Owner = this;
+                modifyProductForm.Show();
+            }
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
