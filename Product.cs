@@ -17,6 +17,8 @@ namespace WGU.C986
         public int Min { get; set; }
         public int Max { get; set; }
 
+        public Product() { }    
+
         public Product(int prodID, string name, int inStock, decimal price, int max, int min)
         {
             ProductID = prodID;

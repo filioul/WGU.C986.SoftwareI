@@ -70,16 +70,24 @@ namespace WGU.C986
 
         private void modifyButtonParts_Click(object sender, EventArgs e)
         {
-            Hide();
-            var modPartForm = new ModifyPart();
-            modPartForm.Show();
+            if (partGridView.CurrentRow.Selected == false)
+            {
+                MessageBox.Show("Please select a row before modifying.");
+            }
+            else
+            {
+                Part selectedPart = partGridView.CurrentRow.DataBoundItem as Part;
+                var modPartForm = new ModifyPart(workingInventory, selectedPart);
+                modPartForm.Owner = this;
+                modPartForm.Show();
+            }
         }
 
         private void addButtonProducts_Click(object sender, EventArgs e)
         {
             // opens AddProduct form when the 'Add' button is clicked
-            Hide();
-            var addProductForm = new AddProduct();
+            var addProductForm = new AddProduct(workingInventory);
+            addProductForm.Owner = this;
             addProductForm.Show();
         }
 
