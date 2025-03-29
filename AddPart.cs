@@ -17,10 +17,10 @@ namespace WGU.C986
         public AddPart(Inventory inventory)
         {
             InitializeComponent();
+            //gets inventory from the main form
             workingInventory = inventory;
 
             //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
-            FormButtons FormButtons = new FormButtons();
             FormValidation FormValidation = new FormValidation();
         }
 
@@ -43,42 +43,49 @@ namespace WGU.C986
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxName);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
 
         private void textBoxInventory_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxInventory);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
 
         private void textBoxPriceCost_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxPriceCost);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
 
         private void textBoxMax_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxMax);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
 
         private void textBoxMin_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxMin);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
 
         private void textBoxMachineID_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxMachineID);
             FormValidation.EnableSaveButtonParts(textBoxName, textBoxInventory, textBoxPriceCost, textBoxMax, textBoxMin, textBoxMachineID, buttonSave);
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            //saves part to inventory if conditions are met
             if (radioButtonInHouse.Checked)
             {
                 try
@@ -90,6 +97,8 @@ namespace WGU.C986
                                                      int.Parse(textBoxMin.Text),
                                                      int.Parse(textBoxMax.Text),
                                                      int.Parse(textBoxMachineID.Text));
+                    FormValidation.CheckMinMax(newInhouse.Min, newInhouse.Max);
+                    FormValidation.CheckInventory(newInhouse.Min, newInhouse.Max, newInhouse.InStock);
                     workingInventory.AddPart(newInhouse);
                     MessageBox.Show("New inhouse part added.");
                     ((MainForm)this.Owner).RefreshDataGridViews(workingInventory);
@@ -111,6 +120,8 @@ namespace WGU.C986
                                                      int.Parse(textBoxMin.Text),
                                                      int.Parse(textBoxMax.Text),
                                                      textBoxMachineID.Text);
+                    FormValidation.CheckMinMax(newOutsourced.Min, newOutsourced.Max);
+                    FormValidation.CheckInventory(newOutsourced.Min, newOutsourced.Max, newOutsourced.InStock);
                     workingInventory.AddPart(newOutsourced);
                     MessageBox.Show("New outsourced part added.");
                     ((MainForm)this.Owner).RefreshDataGridViews(workingInventory);

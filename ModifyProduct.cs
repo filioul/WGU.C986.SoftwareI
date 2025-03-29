@@ -19,6 +19,7 @@ namespace WGU.C986
         public ModifyProduct(Inventory inventory, Product product)
         {
             InitializeComponent();
+            //gets inventory + selection from the main form
             workingInventory = inventory;
             selectedID = product.ProductID;
 
@@ -31,7 +32,6 @@ namespace WGU.C986
             associatedGridView.DataSource = sourceAssociated;
 
             //initiating instance of classes FormButtons, FormValidation to be able to use the methods there
-            FormButtons FormButtons = new FormButtons();
             FormValidation FormValidation = new FormValidation();
         }
 
@@ -42,36 +42,42 @@ namespace WGU.C986
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxName);
             FormValidation.EnableSaveButtonProducts(textBoxName, textBoxInventory, textBoxPrice, textBoxMax, textBoxMin, buttonSave);
         }
 
         private void textBoxInventory_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxInventory);
             FormValidation.EnableSaveButtonProducts(textBoxName, textBoxInventory, textBoxPrice, textBoxMax, textBoxMin, buttonSave);
         }
 
         private void textBoxPrice_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxPrice);
             FormValidation.EnableSaveButtonProducts(textBoxName, textBoxInventory, textBoxPrice, textBoxMax, textBoxMin, buttonSave);
         }
 
         private void textBoxMax_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxMax);
             FormValidation.EnableSaveButtonProducts(textBoxName, textBoxInventory, textBoxPrice, textBoxMax, textBoxMin, buttonSave);
         }
 
         private void textBoxMin_TextChanged(object sender, EventArgs e)
         {
+            //style changes if box is filled
             FormValidation.ChangeFieldColorWhenFilled(textBoxMin);
             FormValidation.EnableSaveButtonProducts(textBoxName, textBoxInventory, textBoxPrice, textBoxMax, textBoxMin, buttonSave);
         }
 
         private void searchButtonProducts_Click(object sender, EventArgs e)
         {
+            //searches for part
             if (searchBoxProducts.Text == "" || !int.TryParse(searchBoxProducts.Text, out int id))
             {
                 MessageBox.Show("Please enter a valid search term.");
@@ -96,6 +102,7 @@ namespace WGU.C986
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
+            //removes associated part
             if (associatedGridView.CurrentRow.Selected == true)
             {
                 Part selectedPart = allGridView.CurrentRow.DataBoundItem as Part;
@@ -109,6 +116,7 @@ namespace WGU.C986
 
         private void addButtonProducts_Click(object sender, EventArgs e)
         {
+            //adds associated part
             if (allGridView.CurrentRow.Selected == true)
             {
                 Part selectedPart = allGridView.CurrentRow.DataBoundItem as Part;
@@ -122,6 +130,7 @@ namespace WGU.C986
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            //saves modified product to inventory if conditions are met
             try
             {
                 newProduct.ProductID = int.Parse(textBoxID.Text);
@@ -130,7 +139,8 @@ namespace WGU.C986
                 newProduct.Price = decimal.Parse(textBoxPrice.Text);
                 newProduct.Max = int.Parse(textBoxMax.Text);
                 newProduct.Min = int.Parse(textBoxMin.Text);
-
+                FormValidation.CheckMinMax(newProduct.Min, newProduct.Max);
+                FormValidation.CheckInventory(newProduct.Min, newProduct.Max, newProduct.InStock);
                 workingInventory.UpdateProduct(selectedID, newProduct);
                 MessageBox.Show("Product updated.");
                 ((MainForm)this.Owner).RefreshDataGridViews(workingInventory);

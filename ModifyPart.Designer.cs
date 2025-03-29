@@ -228,11 +228,13 @@ namespace WGU.C986
             // radioButtonInHouse
             // 
             radioButtonInHouse.AutoSize = true;
+            radioButtonInHouse.Checked = true;
             radioButtonInHouse.Font = new System.Drawing.Font("Segoe UI", 9F);
             radioButtonInHouse.Location = new System.Drawing.Point(6, 4);
             radioButtonInHouse.Name = "radioButtonInHouse";
             radioButtonInHouse.Size = new System.Drawing.Size(74, 19);
             radioButtonInHouse.TabIndex = 20;
+            radioButtonInHouse.TabStop = true;
             radioButtonInHouse.Text = "In-House";
             radioButtonInHouse.UseVisualStyleBackColor = true;
             radioButtonInHouse.CheckedChanged += radioButtonInHouse_CheckedChanged;

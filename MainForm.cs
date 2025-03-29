@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace WGU.C986
 {
@@ -17,17 +11,17 @@ namespace WGU.C986
         {
 
             InitializeComponent();
+            //initializing inventory with test data & setting up grid views
             workingInventory = InitializeInventory();
 
             //initiating instance of classes to be able to use the methods there
-            FormButtons FormButtons = new FormButtons();
             InventoryManagementTools InventorManagementTools = new InventoryManagementTools();
         }
 
         private Inventory InitializeInventory()
         {
+            //initializing inventory with test data & setting up grid views
             workingInventory = InventoryManagementTools.CreateTestInventory();
-
 
             var sourceParts = new BindingSource();
             sourceParts.DataSource = workingInventory.AllParts;
@@ -43,7 +37,7 @@ namespace WGU.C986
 
         public void RefreshDataGridViews(Inventory newInventory)
         {
-        
+            //refreshes data grid views after changes
             workingInventory = newInventory;
 
             var sourcePartsNew = new BindingSource();
@@ -62,7 +56,6 @@ namespace WGU.C986
         private void addButtonParts_Click(object sender, EventArgs e)
         {
             // opens AddPart form when the 'Add' button is clicked
-            
             var addPartForm = new AddPart(workingInventory);
             addPartForm.Owner = this;
             addPartForm.Show();
@@ -70,6 +63,7 @@ namespace WGU.C986
 
         private void modifyButtonParts_Click(object sender, EventArgs e)
         {
+            // opens ModifyPart form when the 'Modify' button is clicked (if a part is selected)
             if (partGridView.CurrentRow.Selected == false)
             {
                 MessageBox.Show("Please select a row before modifying.");
@@ -93,7 +87,7 @@ namespace WGU.C986
 
         private void modifyButtonProducts_Click(object sender, EventArgs e)
         {
-            // opens ModifyProduct form when the 'Modify' button is clicked
+            // opens ModifyProduct form when the 'Modify' button is clicked (if a product is selected)
             if (productGridView.CurrentRow.Selected == false)
             {
                 MessageBox.Show("Please select a row before modifying.");
@@ -108,29 +102,46 @@ namespace WGU.C986
         }
         private void exitButton_Click(object sender, EventArgs e)
         {
-            FormButtons.ExitApplication();
+            Application.Exit();
         }
 
 
         private void deleteButtonParts_Click(object sender, EventArgs e)
         {
+            // deletes an item if conditions are met
             if (partGridView.CurrentRow.Selected == false)
             {
                 MessageBox.Show("Please select a row before deleting.");
-            }
-            else
+            } else if (MessageBox.Show("Are you sure?", "Confirm Deletion",
+                                     MessageBoxButtons.YesNo,
+                                     MessageBoxIcon.Question) == DialogResult.No)
+            {
+                partGridView.ClearSelection();
+            } else
             {
                 Part selectedPart = partGridView.CurrentRow.DataBoundItem as Part;
-                workingInventory.AllParts.Remove(selectedPart);
+                if (!FormValidation.CheckAssociation(workingInventory, selectedPart))
+                    workingInventory.AllParts.Remove(selectedPart);
+                else
+                {
+                    MessageBox.Show("Cannot delete a part that is associated with a product.");
+                }
                 partGridView.ClearSelection();
             }
         }
 
         private void deleteButtonProducts_Click(object sender, EventArgs e)
         {
+            // deletes an item if conditions are met
             if (productGridView.CurrentRow.Selected == false)
             {
                 MessageBox.Show("Please select a row before deleting.");
+            }
+            else if (MessageBox.Show("Are you sure?", "Confirm Deletion",
+                                     MessageBoxButtons.YesNo,
+                                     MessageBoxIcon.Question) == DialogResult.No)
+            {
+                partGridView.ClearSelection();
             }
             else
             {
@@ -142,6 +153,7 @@ namespace WGU.C986
 
         private void searchButtonParts_Click(object sender, EventArgs e)
         {
+            //searches grid view for part
             if (searchBoxParts.Text == "" || !int.TryParse(searchBoxParts.Text, out int id))
             {
                 MessageBox.Show("Please enter a valid search term.");
@@ -166,6 +178,7 @@ namespace WGU.C986
 
         private void searchButtonProducts_Click(object sender, EventArgs e)
         {
+            //searches grid view for product
             if (searchBoxProducts.Text == "" || !int.TryParse(searchBoxProducts.Text, out int id))
             {
                 MessageBox.Show("Please enter a valid search term.");

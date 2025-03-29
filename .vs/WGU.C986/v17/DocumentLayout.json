@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\modifypart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:modifypart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\modifyproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:modifyproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|c:\\users\\judif\\onedrive\\desktop\\wgu.code\\wgu.c986.softwarei\\addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A125E5C-C44B-1B67-83BF-7CE1E61EB8DD}|WGU.C986.csproj|solutionrelative:addproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ModifyPart.cs",
-              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\ModifyPart.cs",
-              "RelativeDocumentMoniker": "ModifyPart.cs",
-              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\ModifyPart.cs",
-              "RelativeToolTip": "ModifyPart.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFIAAAAMAAAAAAAAAA==",
+              "Title": "ModifyProduct.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\ModifyProduct.cs",
+              "RelativeDocumentMoniker": "ModifyProduct.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\ModifyProduct.cs",
+              "RelativeToolTip": "ModifyProduct.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAlwE8AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T02:46:30.405Z",
+              "WhenOpened": "2025-03-29T18:26:45.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddProduct.cs",
+              "DocumentMoniker": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\AddProduct.cs",
+              "RelativeDocumentMoniker": "AddProduct.cs",
+              "ToolTip": "C:\\Users\\judif\\OneDrive\\Desktop\\wgu.code\\WGU.C986.SoftwareI\\AddProduct.cs",
+              "RelativeToolTip": "AddProduct.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAkwHsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T18:26:41.401Z",
               "EditorCaption": ""
             }
           ]
